@@ -1,0 +1,38 @@
+
+        th{
+            width: 25%;
+            font-family:cursive;
+            background-color: antiquewhite;
+            margin: auto;
+            border-radius: 20px;
+            padding: 10px;
+            border: 2px solid rgb(31, 20, 78);
+            border-radius: 15px;
+
+            
+
+        }
+       
+        div{
+
+            width: 95%;
+            height: 80%;
+            text-align: center;
+            
+            background-color: white;
+
+            border-radius: 20px;
+            
+         
+            margin: auto;
+            margin-top: 20px;
+
+
+        }
+        body{
+            background-color:white;
+        }
+        td{
+            border: 2px solid black;
+            background-color: antiquewhite;
+        }

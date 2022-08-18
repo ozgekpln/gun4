@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stil.css">
+    <style>
+        .div{
+            border-radius:10px;
+                background:rgb(239, 242, 194);
+                border: none;
+
+                width:400px;
+                height: 200px;
+                margin:auto;
+                margin-top:60px;
+                padding:15px;
+                padding-top: 50px;
+                text-align:center;
+
+        }
+        #kayıt{
+            border-radius:5px;
+                border:none;
+                width:100px;
+                height:30px;
+                margin:20px 0px 20px;
+                background:rgba(229, 221, 221, 0.5);
+                padding-left:15px;
+                font-style:italic;
+        }
+        input{
+            border-radius:5px;
+            height: 30px;
+            width:71%;
+            background: rgb(249, 247, 247);
+                color:black;
+        }
+        input:hover{
+            background:white;
+                color:black;
+        }
+        body{
+            background-color: 
+        }
+        label{
+            FONT-FAMILY: "Helvetica";
+            color:rgb(25, 24, 24)
+        }
+       
+        #giris
+        {
+            border:none;
+            background-color: white;
+        }
+        #p{
+            
+            border-radius:5px;
+            background-color: rgb(239, 242, 194);
+            width:400px;
+                height: 5px;
+                margin:auto;
+                margin-top:100px;
+                padding:15px;
+                padding-top: 30px;
+                text-align:center;
+                padding-bottom: 40px;
+            font-size: 25px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div >
+    <table>
+        <tr>
+            <th ><a href="index.html"> ANA SAYFA</a></th>
+
+            <th ><a href="adana.html"> ADANA</a></th>
+            <th ><a href="adiyaman.html"> ADIYAMAN</a></th>
+            <th ><a href="erzurum.html"> ERZURUM</a></th>
+            <th id="giris" ><a href="kayit.html"> GİRİŞ</a></th>
+
+
+        </tr>
+    </table>
+    <br>
+    <div>
+        <p id="p">Kullanıcı Girişi</p>
+    </div>
+    <div class="div">
+        <label >İsim:</label>
+  
+        <input type="text" id="name" required />
+        <br> <br>
+        <label>Şifre:</label>
+        <input type="password" id="password" required />
+  <br><br>
+
+        <button id="kayıt" type="submit" onclick="kayit()">Kayıt Ol</button>
+   
+        <button id="kayıt" type="submit" onclick="giris()">Giriş</button>
+       
+  
+      
+  </div>
+  
+      
+    
+  <script>
+
+    function kayit() 
+        {
+            var isim = document.getElementById('name').value;
+            var sifre = document.getElementById('password').value;
+
+            localStorage.setItem('isim',isim);
+            localStorage.setItem('sifre',sifre);
+            alert('Kayıt Başarılı');
+        }
+
+    function giris()
+        {
+            var dataName = localStorage.getItem('isim');
+            var dataSifre = localStorage.getItem('sifre');
+
+
+            if((dataName == document.getElementById('name').value)&&(dataSifre == document.getElementById('password').value))
+            {
+               alert('Giris Başarılı!');
+            }
+            else
+            {
+                alert("Giriş Başarısız");
+            }
+            
+        }
+</script>   
+    <p></p>
+</div>
+</body>
+</html>
